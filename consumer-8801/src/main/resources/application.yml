@@ -1,0 +1,36 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: spring-cloud-alibaba-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        #,localhost:1111
+
+#      config:
+#        server-addr: localhost:8848
+#        prefix: spring-cloud-alibaba-demo
+#        namespace: 0197005d-9c2a-468f-8956-59029e00937b
+#        file-extension: yaml
+#        group: DEFAULT_GROUP
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080
+
+dubbo:
+  application:
+    name: consumer8801
+  registry:
+    address: nacos://localhost:8848
+logging:
+  level:
+    org.xujiaqi: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
