@@ -14,19 +14,20 @@ spring:
 #        dashboard: localhost:8080
 
 
-##配置dubbo
-#dubbo:
-#  application:
-#    name: provider8001
-##协议
-#  protocol:
-#    name: dubbo
-#    port: 20880
-##dubbo.registry.address=nacos://localhost:8848/
-##注册中心
-#  registry:
-#    address: nacos://localhost:8848/
-#    use-as-config-center: false
+#配置dubbo
+dubbo:
+  application:
+    name: provider8001
+#协议
+  protocol:
+    name: dubbo
+    port: 20880
+    serialization: fastjson2
+  #dubbo.registry.address=nacos://localhost:8848/
+#注册中心
+  registry:
+    address: nacos://localhost:8848/
+    use-as-config-center: false
 
 
 

@@ -51,12 +51,12 @@
 <!--            <groupId>com.alibaba.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
 <!--        </dependency>-->
-<!--        &lt;!&ndash;Dubbo &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.dubbo</groupId>-->
-<!--            <artifactId>dubbo-spring-boot-starter</artifactId>-->
-<!--            <version>2.7.5</version>-->
-<!--        </dependency>-->
+        <!--Dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.5</version>
+        </dependency>
         <dependency>
             <groupId>com.xujiaqi.demo</groupId>
             <artifactId>service-api</artifactId>
@@ -83,6 +83,11 @@
 <!--            <artifactId>sentinel-apache-dubbo-adapter</artifactId>-->
 <!--        </dependency>-->
 
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-serialization-fastjson2</artifactId>
+            <version>3.2.4</version>
+        </dependency>
 
 
 

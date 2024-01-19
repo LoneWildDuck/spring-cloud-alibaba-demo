@@ -4,10 +4,10 @@ package org.xujiaqi.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 //import org.xujiaqi.model.CommonOut;
-//import org.xujiaqi.service.TestDubboService;
+import org.xujiaqi.service.TestDubboService;
 //import org.xujiaqi.service.TestOpenFeignConsumerService;
 //import org.xujiaqi.service.TestSentinelService;
-//import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,9 +29,9 @@ public class TestConsumerController {
 
 //    @Reference
 //    TestSentinelService testSentinelService;
-//
-//    @Reference
-//    TestDubboService testDubboService;
+
+    @Reference
+    TestDubboService testDubboService;
 
 //    @GetMapping("testOpenFeign")
 //    public CommonOut testOpenFeign(){
@@ -43,10 +43,10 @@ public class TestConsumerController {
         return restTemplate.getForObject("http://spring-cloud-alibaba-provider/testOpenFeign",CommonOut.class);
     }
 
-//    @GetMapping("testDubbo")
-//    public CommonOut tesDubbo(){
-//        return testDubboService.get();
-//    }
+    @GetMapping("testDubbo")
+    public CommonOut tesDubbo(){
+        return testDubboService.get();
+    }
 
 //    @GetMapping("testNacosConfig")
 //    public CommonOut testNacosConfig(){

@@ -24,6 +24,10 @@ dubbo:
     name: consumer8801
   registry:
     address: nacos://localhost:8848
+  protocol:
+    name: dubbo
+    port: 20880
+    serialization: json
 logging:
   level:
     org.xujiaqi: debug
