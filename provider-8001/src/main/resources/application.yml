@@ -1,33 +1,28 @@
 server:
   port: 8001
 
-#
 spring:
   application:
     name: spring-cloud-alibaba-provider
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 #,localhost:1111
-#    sentinel:
-#      transport:
-#        dashboard: localhost:8080
-
+        server-addr: localhost:8848
 
 #配置dubbo
 dubbo:
+  scan:
+    base-packages: org.xujiaqi
   application:
-    name: provider8001
-#协议
-  protocol:
+    name: ${spring.application.name}
+  protocol: #协议
     name: dubbo
     port: 20880
-    serialization: fastjson2
-  #dubbo.registry.address=nacos://localhost:8848/
-#注册中心
-  registry:
-    address: nacos://localhost:8848/
-    use-as-config-center: false
+  registry: #注册信息,原值为nacos://localhost:8848/。这个是dubbo和spring-boot和nacos整合，但是现在要把他放到注册中心去，不然会和原有服务注册冲突
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: ${spring.application.name}
+#    use-as-config-center: false
 
 
 

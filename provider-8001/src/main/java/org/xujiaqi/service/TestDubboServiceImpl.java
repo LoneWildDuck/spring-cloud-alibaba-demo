@@ -1,9 +1,10 @@
 package org.xujiaqi.service;
 
+import org.apache.dubbo.config.annotation.DubboService;
 import org.xujiaqi.model.CommonOut;
 import org.apache.dubbo.config.annotation.Service;
 
-@Service
+@DubboService
 public class TestDubboServiceImpl implements TestDubboService {
 
     public CommonOut get(){
