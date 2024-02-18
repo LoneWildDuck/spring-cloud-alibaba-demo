@@ -18,6 +18,8 @@ dubbo:
     address: spring-cloud://localhost
   application:
     name: ${spring.application.name}
+  cloud:
+    subscribed-services: spring-cloud-alibaba-provider
 #      config:
 #        server-addr: localhost:8848
 #        prefix: spring-cloud-alibaba-demo
