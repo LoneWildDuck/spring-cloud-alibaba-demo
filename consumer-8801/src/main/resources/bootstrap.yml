@@ -1,0 +1,17 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: spring-cloud-alibaba-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml #指定yaml模式
+    sentinel:
+      transport:
+        #配置 Sentinel dashboard 地址
+        dashboard: localhost:8080
+        port: 8719

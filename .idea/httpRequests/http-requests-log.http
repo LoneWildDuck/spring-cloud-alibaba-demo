@@ -1,3 +1,57 @@
+GET http://localhost:8801/testSentinelResource
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-19T111501.200.txt
+
+###
+
+GET http://localhost:8801/testDubbo2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-19T104334.200.json
+
+###
+
+GET http://localhost:8801/testSentinelResource
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-19T102104.200.json
+
+###
+
+GET http://localhost:8801/testNacosConfig
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-19T102011.200.json
+
+###
+
+GET http://localhost:8801/testDubbo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-19T101930.200.json
+
+###
+
+GET http://localhost:8801/testOpenFeign2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-19T101900.200.json
+
+###
+
 GET http://localhost:8801/testOpenFeign2
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
@@ -391,60 +445,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2024-01-26T114603.500.json
-
-###
-
-GET http://localhost:8801/testOpenFeign2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-26T113757.500.json
-
-###
-
-GET http://localhost:8801/testOpenFeign2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-26T113649.500.json
-
-###
-
-GET http://localhost:8801/testOpenFeign2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-26T110243.500.json
-
-###
-
-GET http://localhost:8801/testOpenFeign2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-26T110237.500.json
-
-###
-
-GET http://localhost:8801/testOpenFeign2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-26T110027.200.json
-
-###
-
-GET http://localhost:8801/testOpenFeign2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-26T105820.500.json
 
 ###
 
