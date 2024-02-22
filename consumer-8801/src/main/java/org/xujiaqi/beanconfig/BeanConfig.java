@@ -22,6 +22,7 @@ public class BeanConfig {
         return Logger.Level.FULL;
     }
 
+    //需要开启负载均衡,用loadBalanced完成
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate(){

@@ -1,16 +1,15 @@
 package org.xujiaqi.controller;
 
 //import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.client.RestTemplate;
-//import org.xujiaqi.model.CommonOut;
+import org.xujiaqi.entity.MeetingRoomXjq;
+import org.xujiaqi.manager.TestSeataManager;
 import org.xujiaqi.manager.TestSentinelResourceManager;
+import org.xujiaqi.model.AddMeetingIn;
 import org.xujiaqi.service.TestDubboService;
-//import org.xujiaqi.service.TestOpenFeignConsumerService;
-//import org.xujiaqi.service.TestSentinelService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +35,8 @@ public class TestConsumerController {
     TestSentinelService testSentinelService;
     @Autowired
     TestSentinelResourceManager testSentinelResourceManager;
+    @Autowired
+    TestSeataManager testSeataManager;
 
     @GetMapping("testOpenFeign")
     public CommonOut testOpenFeign(){
@@ -48,8 +49,14 @@ public class TestConsumerController {
     }
 
     @GetMapping("testDubbo")
-    public CommonOut tesDubbo(){
-        return testDubboService.get();
+    public CommonOut tesDubbo(String roomNo, Integer roomSize){
+        AddMeetingIn in = new AddMeetingIn();
+        in.setRoomNo(roomNo);
+        in.setRoomSize(roomSize);
+        testSeataManager.addMeeting(in);
+        CommonOut out = new CommonOut();
+        out.setRespCode("200");
+        return out;
     }
 
     //测试获取nacos的配置

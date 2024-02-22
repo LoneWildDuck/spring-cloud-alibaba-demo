@@ -1,14 +1,13 @@
 server:
-  port: 8801
+  port: 8001
 spring:
   application:
-    name: spring-cloud-alibaba-consumer
+    name: spring-cloud-alibaba-provider
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
         namespace: public
-        register-enabled: false
       config:
         namespace: ${env}
         server-addr: localhost:8848
@@ -23,7 +22,8 @@ spring:
       seata:
         tx-service-group: default_tx_group
     sentinel:
-      transport:
-        #配置 Sentinel dashboard 地址
-        dashboard: localhost:8080
-        port: 8719
+     transport:
+       #配置 Sentinel dashboard 地址
+       dashboard: localhost:8080
+       port: 8719
+

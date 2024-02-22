@@ -1,14 +1,3 @@
-server:
-  port: 8001
-
-spring:
-  application:
-    name: spring-cloud-alibaba-provider
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-
 #配置dubbo
 dubbo:
   scan:
@@ -24,6 +13,9 @@ dubbo:
     subscribed-services: ${spring.application.name}
 #    use-as-config-center: false
 
+#配置mapper
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
 
 
 
